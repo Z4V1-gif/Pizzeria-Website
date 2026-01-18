@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap");
 
-.platzhalter {
-  height: 300vh;
-}
-
 a {
   text-decoration: none;
   font-family: "Inter", sans-serif;
@@ -15,11 +11,11 @@ a {
   display: flex;
   background-color: #1a1a1a;
   margin: 0rem;
-  padding: 1.5rem;
-  flex-direction: center;
+  height: 5rem;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  text-align: center;
 }
 
 nav {
@@ -27,27 +23,25 @@ nav {
 }
 
 .nav-item {
+  text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
-  padding-right: 3rem;
-  padding-left: 3rem;
 }
 
 .nav-item:hover {
-  background-color: transparent;
-  color: #ff6600;
+  color: var(--primary-color);
 }
 
 .hero {
-  background-image: url(hero.jpg);
+  background: url(hero.jpg);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  min-height: 100vh;
+  height: calc(100vh - 5rem);
   background-repeat: no repeat;
   background-size: cover;
   background-position: center;
@@ -73,6 +67,7 @@ nav {
   font-family: "Lobster", sans-serif;
   line-height: 3rem;
   margin: 0 0 1rem 0;
+  background-color: transparent;
 }
 
 h1 {
@@ -83,6 +78,7 @@ h1 {
 .subtitle {
   font-size: 1rem;
   font-family: "Inter", serif;
+  background-color: transparent;
 }
 
 body * {
@@ -90,6 +86,8 @@ body * {
   z-index: 1;
   color: #fff;
   font-family: "Inter", sans-serif;
+  --primary-color: #ff6600;
+  background-color: #1a1a1a;
 }
 
 .button,
@@ -97,8 +95,8 @@ body * {
   display: inline-block;
   width: fit-content;
   padding: 1rem 2rem;
-  background-color: #ff6600;
-  border: 1px solid #ff6600;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: #fff;
   font-size: 16px;
   transition: all 0.2s ease-in-out;
@@ -108,7 +106,7 @@ body * {
 
 .button:hover {
   background-color: transparent;
-  color: #ff6600;
+  color: var(--primary-color);
 }
 
 .button-inverted:hover {
@@ -116,7 +114,64 @@ body * {
   color: #fff;
 }
 
+.about {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #1a1a1a;
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.subtitle2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-underline-offset: 0.3rem;
+  margin: 2rem 0 1rem 0;
+  width: fit-content;
+  font-family: "Inter", serif;
+}
+
+.about-images {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.about-image-large {
+  min-width: 50%;
+}
+
+.about-images-small {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-image-small {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-action {
+  margin-top: 2rem;
+}
+
 @media only screen and (min-width: 600px) {
+  .nav {
+    gap: 2rem;
+    font-size: 1rem;
+  }
   .title {
     font-size: 4rem;
     line-height: 4rem;
@@ -132,6 +187,9 @@ body * {
 }
 
 @media only screen and (min-width: 1000px) {
+  .nav {
+    gap: 4rem;
+  }
   .title {
     font-size: 6rem;
     line-height: 6.5rem;
