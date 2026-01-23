@@ -109,8 +109,7 @@ body * {
   --text-color: #ddd;
 }
 
-.button,
-.button-inverted {
+.hero .button {
   display: inline-block;
   width: fit-content;
   padding: 1rem 2rem;
@@ -119,13 +118,37 @@ body * {
   color: #fff;
   font-size: 16px;
   transition: all 0.2s ease-in-out;
-  margin-top: 4rem;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
 
 .button:hover {
   background-color: var(--background-color);
   color: var(--primary-color);
+}
+
+.button-inverted {
+  display: inline-block;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
 }
 
 .button-inverted:hover {
@@ -207,12 +230,14 @@ body * {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-block: 2rem 0;
-  padding-block: 1.5rem 0;
+  /* margin-block: 2rem 0;
+  padding-block: 1.5rem 0; */
   min-height: 280px;
   width: 100%;
   position: relative;
   z-index: 1;
+  margin: 6rem 0;
+  padding: 2rem 0;
 }
 
 .info-wrapper::before {
@@ -231,6 +256,7 @@ body * {
 .open-times .subtitle2 {
   text-align: center;
   width: 100%;
+  margin: 0 auto;
 }
 
 .hours {
@@ -245,13 +271,49 @@ body * {
 .hours-entry {
   display: flex;
   justify-content: space-between;
-  width: 15rem;
+  width: 19rem;
   margin-bottom: 0.25rem;
 }
 
 .days {
   font-family: "Inter", serif;
   color: var(--text-color);
+}
+
+.contact-image {
+  width: 50%;
+  height: 50%;
+}
+
+.contact-detail {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* gap: 1rem; */
+  margin-left: 10rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-action {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -301,6 +363,20 @@ body * {
   }
 }
 
+.info-wrapper {
+  margin-top: 8rem 0;
+  padding: 6rem 0;
+}
+
+.hours {
+  margin-top: 2rem;
+}
+
+.hours-entry {
+  width: 20rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
 @media only screen and (min-width: 1400px) {
   .container {
     max-width: 1200px;
